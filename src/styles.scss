@@ -1,0 +1,153 @@
+// Bootstrap をインポート
+@import '~bootstrap/scss/bootstrap';
+
+// カスタム変数
+:root {
+  --custom-primary: #0d6efd;
+  --custom-secondary: #6c757d;
+  --custom-success: #198754;
+  --custom-warning: #ffc107;
+  --custom-danger: #dc3545;
+  --custom-light: #f8f9fa;
+  --custom-dark: #212529;
+}
+
+// カスタムスタイル
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  line-height: 1.6;
+}
+
+// ヒーローセクション
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(108, 117, 125, 0.1) 100%);
+}
+
+// カードホバーエフェクト
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+// ボタンアニメーション
+.btn {
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// プログレスバーアニメーション
+.progress-bar {
+  transition: width 0.6s ease;
+}
+
+// ナビゲーションバー
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: rgba(255, 255, 255, 1) !important;
+  }
+}
+
+// フォームスタイル
+.form-control {
+  border-radius: 0.5rem;
+  border: 2px solid #e9ecef;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  
+  &:focus {
+    border-color: var(--custom-primary);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  }
+}
+
+// アイコンスタイル（Bootstrap Icons を想定）
+.bi {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+// ローディングアニメーション
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner-border {
+  animation: spin 0.75s linear infinite;
+}
+
+// レスポンシブ調整
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 60vh;
+    text-align: center;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .btn-lg {
+    margin-bottom: 1rem;
+  }
+}
+
+// ダークモード対応
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bs-body-bg: #1a1a1a;
+    --bs-body-color: #ffffff;
+  }
+}
+
+// カスタムユーティリティクラス
+.text-gradient {
+  background: linear-gradient(45deg, var(--custom-primary), var(--custom-success));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-custom {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+// スクロールバーのカスタマイズ
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--custom-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0b5ed7;
+}
