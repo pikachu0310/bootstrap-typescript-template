@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap TypeScript Template</title>
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bootstrap Template</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">ホーム</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">アバウト</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">コンタクト</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="container-fluid p-0">
+        <!-- ヒーローセクション -->
+        <section id="home" class="hero-section bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold text-primary">Bootstrap + TypeScript</h1>
+                        <p class="lead mb-4">レスポンシブなWebアプリケーションの開発テンプレートです。</p>
+                        <button type="button" class="btn btn-primary btn-lg me-3" id="primary-btn">
+                            開始する
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg" id="secondary-btn">
+                            詳細を見る
+                        </button>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card shadow-lg">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">デモカード</h5>
+                                <p class="card-text">このカードはBootstrapコンポーネントのデモです。</p>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                </div>
+                                <button class="btn btn-success" id="demo-btn">
+                                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                    アクション
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 機能セクション -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="h1 fw-bold">主な機能</h2>
+                        <p class="lead text-muted">このテンプレートに含まれる機能一覧</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="bg-primary bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-code-slash text-white fs-4"></i>
+                                </div>
+                                <h5 class="card-title">TypeScript</h5>
+                                <p class="card-text text-muted">型安全なJavaScript開発環境</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="bg-success bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-bootstrap text-white fs-4"></i>
+                                </div>
+                                <h5 class="card-title">Bootstrap 5</h5>
+                                <p class="card-text text-muted">レスポンシブUIフレームワーク</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="bg-warning bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="bi bi-gear text-white fs-4"></i>
+                                </div>
+                                <h5 class="card-title">Vite</h5>
+                                <p class="card-text text-muted">高速ビルドツール</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- コンタクトセクション -->
+        <section id="contact" class="bg-light py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card shadow">
+                            <div class="card-body p-5">
+                                <h2 class="card-title text-center mb-4">お問い合わせ</h2>
+                                <form id="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="name" class="form-label">お名前</label>
+                                            <input type="text" class="form-control" id="name" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">メールアドレス</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">メッセージ</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">送信</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Bootstrap TypeScript Template</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small class="text-muted">Powered by Bootstrap & TypeScript & Vite</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- トーストコンテナ -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notification-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">通知</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toast-message">
+                メッセージがここに表示されます
+            </div>
+        </div>
+    </div>
+
+    <!-- Vite Entry Point -->
+    <script type="module" src="/src/index.ts"></script>
+</body>
+</html>
